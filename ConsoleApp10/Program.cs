@@ -6,17 +6,17 @@ namespace ConsoleApp10
     {
         static void Main(string[] args)
         {
-            DateTime timeNow = DateTime.Now;    // Gets current system time
+            DateTime timeNow = DateTime.Now;    // Hämtar datum
+            
+            Console.WriteLine(timeNow);//skriver ut datum
+            Console.WriteLine(timeNow.ToString());    // gör samma som föregående rad
+            Console.WriteLine(timeNow.ToShortDateString());//skriver ett kort datum
+            Console.WriteLine(timeNow.ToLongDateString()); //skriver datumet större format alltså med tid efter också
+            Console.WriteLine(timeNow.ToString("yy-dd-MM")); // skriver ut år månad dag med 2 siffror o - emellan ex. 75-07-19
 
-            Console.WriteLine(timeNow);
-            Console.WriteLine(timeNow.ToString());    // same as above
-            Console.WriteLine(timeNow.ToShortDateString());
-            Console.WriteLine(timeNow.ToLongDateString());
-            Console.WriteLine(timeNow.ToString("yy-dd-MM"));
+            DateTime timeMod = timeNow.AddHours(-1); // tar klockslaget just nu och minskar en timme
 
-            DateTime timeMod = timeNow.AddHours(-1);
-
-            Console.WriteLine(timeMod);
+            Console.WriteLine(timeMod);  //skriver ut föregående rad
 
             TimeSpan timeSpan = new TimeSpan(12, 45, 30);
 
